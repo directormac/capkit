@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Publish Docker Image
-        uses: matootie/github-docker@v3.1.0
+      - uses: matootie/github-docker@v3.1.0
         with:
           accessToken: ${{ github.token }}
           containerRegistry: true
       - name: Deploy on CapRover
-        uses: caprover/deploy-from-githubv1.1.2
+      - uses: caprover/deploy-from-githubv1.1.2
         with:
           server: https://captain.app.mkra.dev
           app: 'capkit'
