@@ -2,7 +2,7 @@ name: Build and Publish to CapRover
 
 on: 
   push:
-    branches: [production]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
